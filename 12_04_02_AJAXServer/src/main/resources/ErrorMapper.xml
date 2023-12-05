@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ji.spring009.error.errorMapper">
+	<select id="searchAllError" resultType="com.ji.spring009.error.Error">
+		SELECT * FROM dec04_error
+	</select>
+	<select id="searchError" resultType="com.ji.spring009.error.Error" parameterType="com.ji.spring009.error.Error">
+		SELECT * FROM dec04_error WHERE e_what like '%'||#{e_what}||'%' ORDER BY e_where
+	</select>
+</mapper>

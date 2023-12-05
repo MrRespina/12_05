@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jQuery.js"></script>
+<script type="text/javascript">
+
+	// https://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1150064000
+	$(function (){
+		
+		/* $.getJSON('http://localhost/spring009/error.getAllJSON',function(dd){
+			alert(JSON.stringify(dd));
+		})
+		 */
+		 
+		/*  $.ajax({			// 외부 사용 header 허용하지 않았기 때문에 사용 불가.
+				url : "https://www.kma.go.kr/wid/queryDFSRSS.jsp",
+				data : {zone : 1150064000}
+				success : function(e) {
+					alert(e);
+				}
+		 }); */
+		 
+		 
+		
+	});
+	
+</script>
+</head>
+<body>
+	<!-- 
+		AJAX - JavaScript > Web 브라우저
+		브라우저의 동일 출처 정책에 걸리기 때문에
+		단순한 AJAX로는 다른 사람의 것을 가져올 수 없음.
+		'동일출처정책' : 웹과 상호작용을 하는 JavaScript 코드에 대한 [보안] 정책
+		
+		Cross-Domain AJAX > 브라우저의 동일 출처 정책을 우회하는 AJAX
+			다른 사람이 만든 것 가져오는 ajax
+			
+			[서버에서 배포 시]
+				1) JSONP (JSON With Padding)
+					일부러 JSON 모양을 변경해서 JSON이 아닌 것처럼 > AJAX가 아니게.
+				2) 응답 헤더 : Access-Control-Allow-Origin 세팅
+				
+			[서버측에서 cross-domain 허용하지 않았다면 - 직접작업]
+				3) proxy 서버
+					: Server와 Client 사이에 중계 기능을 해줌
+					> IP 주소 우회하여 사용하는것
+					AJAX로는 데이터 가져올 수 없음.
+					JAVA로는 가능하다.
+	 -->
+</body>
+</html>
